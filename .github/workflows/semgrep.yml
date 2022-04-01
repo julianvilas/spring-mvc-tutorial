@@ -39,6 +39,8 @@ jobs:
           publishToken: ${{ secrets.SEMGREP_APP_TOKEN }}
           publishDeployment: ${{ secrets.SEMGREP_DEPLOYMENT_ID }}
           generateSarif: "1"
+          config: >- # more at semgrep.dev/explore
+            ./spring.yml
 
       # Upload SARIF file generated in previous step
       - name: Upload SARIF file
